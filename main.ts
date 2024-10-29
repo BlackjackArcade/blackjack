@@ -166,26 +166,16 @@ function startMultiplayer() {
 
     // Countdown loop to display remaining time
     for (let i = waitTime; i > 0; i--) {
-        // Clear the screen before printing the new message
-        screen.clear();
-
-        // Display the countdown message in the center of the screen
-        screen.printCenter(`Waiting for players... ${i} seconds remaining`, 0, 5, 0);
-
-        // Pause for 1 second (1000 milliseconds)
-        pause(1000);
+        game.splash(`Waiting for players... ${i} seconds remaining`, 0)
+        pause(150); // Pause for 1 second
     }
-
-    // Clear the screen after countdown
-    
 
     // Generate and save the random 4-digit code after countdown
     const code = generateRandomCode();
     saveCodeToMultiplayerJson(code);
-
-    // Show message that players are connected
-    screen.printCenter("Players connected! Game starting...", 0, 5, 0);
+    game.splash("Players connected! Game starting...", 0)
 }
+
 
 
 

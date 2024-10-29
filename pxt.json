@@ -12,7 +12,6 @@
         "tilemap.g.ts",
         "images.g.jres",
         "images.g.ts",
-        "main.py",
         "Multiplayer.json"
     ],
     "testFiles": [
